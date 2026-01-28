@@ -8,13 +8,18 @@ export const metadata: Metadata = {
   description: "My portfolio built with Next.js",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Navbar />
-          <main className="container mx-auto px-4 py-8">
+          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-violet-500/10 to-transparent"></div>
+          <main className="container mx-auto p-4 pt-20 max-w-1200px">
             {children}
           </main>
         </ThemeProvider>

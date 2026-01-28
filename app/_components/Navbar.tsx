@@ -1,9 +1,13 @@
 "use client";
 
 import BaseLink from "@/components/BaseLink";
-import ThemeToggle from "./ThemeToggle";
-import { ReactNode } from "react";
+// import ThemeToggle from "./ThemeToggle";
+import dynamic from 'next/dynamic';
 
+import { ReactNode } from "react";
+const ThemeToggle = dynamic(() => import('./ThemeToggle'), {
+  ssr: false,
+});
 const links = [
   { id: 0, name: "Home", path: "/home" },
   { id: 1, name: "About", path: "/about" },
@@ -26,8 +30,8 @@ function NavbarLinks({ path, children }: NavbarLinkProps) {
 
 export default function Navbar() {
   return (
-    <nav className="shadow p-4 fixed w-full">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="shadow p-4 fixed w-full max-w-1200px mx-auto">
+      <div className="container  px-4 mx-auto flex justify-between items-center">
         {links.map((link) => (
           <NavbarLinks key={link.id} path={link.path}>
             {link.name}

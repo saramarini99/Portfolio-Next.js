@@ -2,8 +2,8 @@ import Image from "next/image";
 
 type Props = {
   src: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   alt: string;
   className?: string;
 };
