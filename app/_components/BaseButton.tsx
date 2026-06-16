@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 interface Props {
   onClick?: () => void;
-  type?: "primary" | "secondary" | "outline";
+  type?: "primary" | "secondary" | "textBtn" | "transparent";
   size?: "sm" | "md" | "lg";
   loading?: boolean;
   children: ReactNode;
@@ -23,12 +23,12 @@ export default function BaseButton({
   ...props
 }: Props) {
   const typeClasses = {
-    primary: "bg-blue-300 text-black hover:bg-blue-700 focus:ring-blue-500",
-    secondary:
-      "bg-gray-200 text-gray-700 hover:bg-gray-300 focus:ring-gray-400",
+    primary: "bg-blue-300 text-black",
+    secondary: "text-black font-bold text-sm bg-amber-400 hover:bg-amber-300",
     danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
-    outline:
-      "border border-gray-400 text-gray-700 hover:bg-gray-100 focus:ring-gray-400 bg-transparent",
+    textBtn:
+      "text-amber-500 dark:text-amber-400 hover:text-white transition-colors uppercase tracking-widest",
+    transparent: "",
   };
 
   const sizeClasses = {

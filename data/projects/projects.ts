@@ -1,38 +1,74 @@
 export const projects = [
   {
+    id: "tabdeal",
+    featured: true,
     title: "Tabdeal",
-    subtitle: "Cryptocurrency Exchange Platform",
+    framework: "Vue / Nuxt",
+    frameworkColor: "emerald",
+    year: "2025-2026",
+    role: "Front-End Developer",
     description:
-      "A fast and secure cryptocurrency exchange platform built with Nuxt.js. The project focuses on performance, security, and a smooth trading experience for users.",
-    tech: ["Nuxt.js", "Crypto", "Security", "Performance"],
-    snapshot: "/project/images/tabdeal.png",
-    link: "https://tabdeal.org/",
+      "Large-scale cryptocurrency exchange platform. Led the migration from Nuxt 2 to Nuxt 3, improving performance, scalability, and SSR hydration. Worked within a 12-member team on SEO, reCAPTCHA, CI/CD pipelines, and release processes.",
+    tags: [
+      "Nuxt.js",
+      "Vue",
+      "Pinia",
+      "Tailwind",
+      "SSR",
+      "SEO",
+      "Webpack",
+      "SWR",
+    ],
+    links: { live: "https://tabdeal.org/" },
   },
   {
+    id: "ghabzino",
+    featured: false,
     title: "Ghabzino Counter",
-    subtitle: "Unified Fine & Bill Payment System",
+    framework: "Vue",
+    frameworkColor: "emerald",
+    year: "2022–2025",
+    role: "Front-End Developer",
     description:
-      "A centralized counter panel developed for police and insurance offices, allowing customers to pay all fines and bills in one streamlined process without repetitive inquiries.",
-    tech: ["Enterprise System", "Dashboards", "UX Optimization"],
-    snapshot: "/project/images/ghabzino.png",
-    link: "https://counter.ghabzino.com/",
+      "Admin panel for police offices and billing services. Built dynamic UI components with Vue 3 Options API and created a Design Language System to unify UI across the product suite.",
+    tags: ["Vue 3", "Options API", "Pinia", "Sass", "Vite", "REST API"],
+    links: { live: "https://counter.ghabzino.com/" },
   },
   {
+    id: "portfolio",
+    featured: false,
     title: "Personal Portfolio",
-    subtitle: "Next.js & React",
+    framework: "Next.js / React",
+    frameworkColor: "amber",
+    year: "2026",
+    role: "Solo project",
     description:
-      "A personal portfolio currently under development using Next.js to deepen expertise in modern React patterns, routing, and server-side rendering.",
-    tech: ["Next.js", "React", "SSR", "Tailwind"],
-    snapshot: "/projects/portfolio.png",
-    link: "/",
+      "This portfolio — built to learn Next.js App Router, React hooks, server components, and TypeScript. Includes dark/light mode, dynamic routing, and a contact form.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind", "App Router", "SSR"],
+    links: { live: "#", github: "https://github.com/saramarini99" },
   },
   {
+    id: "minimench",
+    featured: false,
     title: "Mini Mench",
-    subtitle: "Responsive Game Landing Page",
+    framework: "Vanilla",
+    frameworkColor: "slate",
+    year: "2023",
+    role: "Front-End Developer",
     description:
-      "A responsive landing page for the Mini Mench game. The main challenge was achieving pixel-perfect responsiveness across all devices with a complex visual layout.",
-    tech: ["JavaScript", "CSS", "Sass", "Responsive Design"],
-    snapshot: "/project/images/minimench-6.png",
-    link: "https://minimench.ir/",
+      "Responsive landing page for a mobile game. The challenge was pixel-perfect responsiveness across all devices given a complex layered design.",
+    tags: ["JavaScript", "CSS", "Sass", "Responsive Design"],
+    links: { live: "http://minimench.ir/" },
   },
 ];
+
+export const frameworkBadge: Record<string, string> = {
+  emerald:
+    "bg-emerald-400/10 text-emerald-600 dark:text-emerald-400 border-emerald-400/20",
+  amber:
+    "bg-amber-400/10 text-amber-600 dark:text-amber-400 border-amber-400/20",
+  slate:
+    "bg-slate-400/10 text-slate-500 dark:text-slate-400 border-slate-300/30 dark:border-slate-600/30",
+};
+
+export const filters = ["All", "Vue / Nuxt", "Next.js / React", "Vanilla"];

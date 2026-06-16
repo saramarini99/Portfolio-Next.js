@@ -1,10 +1,13 @@
-interface Props  {
+interface Props {
   label: string;
   name: string;
+  type: string;
   error?: string;
+  value: string;
+  required: boolean;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   helperText?: string;
-  fullWidth?: boolean;
-  className?:string
+  className?: string;
 }
 
 export default function BaseInput({
@@ -12,7 +15,10 @@ export default function BaseInput({
   name,
   error,
   helperText,
-  fullWidth = true,
+  type,
+  value,
+  required,
+  onChange,
   className,
   ...rest
 }: Props) {
@@ -22,27 +28,26 @@ export default function BaseInput({
   const errorBorder = "border-red-500 focus:ring-red-500 focus:border-red-500";
 
   return (
-    <div className={fullWidth ? "w-full" : ""}>
+    <div className="flex flex-col gap-1.5">
+      {" "}
       <label
         htmlFor={name}
-        className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-200"
+        className="text-[11px] font-mono text-slate-400 dark:text-white/40 uppercase tracking-widest"
       >
         {label}
       </label>
-
       <input
         id={name}
         name={name}
-        className={[
-          base,
-          error ? errorBorder : normalBorder,
-          className ?? "",
-        ]
+        type={type}
+        value={value}
+        required={required}
+        onChange={onChange}
+        className={[base, error ? errorBorder : normalBorder, className ?? ""]
           .filter(Boolean)
           .join(" ")}
         {...rest}
       />
-
       {error ? (
         <p className="mt-1 text-xs text-red-500">{error}</p>
       ) : helperText ? (

@@ -2,33 +2,32 @@ import { skills } from "../../../data/about/about";
 
 export default function SkillsGrid() {
   return (
-    <div className="space-y-8">
-      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
+    <section>
+      <p className="font-mono text-xs tracking-[0.3em] uppercase text-amber-500 dark:text-amber-400 mb-8">
         Skills
-      </h2>
-
-      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {skills.map((skill) => (
-          <li
-            key={skill}
-            className="
-              flex items-center justify-center
-              rounded-xl border border-gray-200 dark:border-gray-700
-              bg-white dark:bg-gray-800
-              shadow-sm
-              transition-transform transition-colors duration-300
-              text-sm font-medium
-              px-5 py-4
-              cursor-pointer
-              hover:bg-indigo-50 dark:hover:bg-indigo-900
-              hover:scale-105
-              hover:shadow-lg
-            "
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {Object.entries(skills).map(([category, items]) => (
+          <div
+            key={category}
+            className="border border-slate-200 dark:border-white/10 rounded-2xl p-6 bg-white dark:bg-white/[0.02]"
           >
-            {skill}
-          </li>
+            <p className="text-xs font-mono text-slate-400 dark:text-white/30 uppercase tracking-widest mb-4">
+              {category}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {items.map((skill) => (
+                <span
+                  key={skill}
+                  className="text-xs px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white/70 border border-slate-200 dark:border-white/10"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+    </section>
   );
 }

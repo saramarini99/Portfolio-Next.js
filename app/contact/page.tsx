@@ -1,28 +1,56 @@
-"use client"
-import { useState } from 'react'
-import BaseButton from '@/components/BaseButton'
+"use client";
 
-export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+import { useState } from "react";
+import BaseLink from "@/components/BaseLink";
+import BaseModal from "@/components/BaseModal";
+import ContactForm from "@/components/contact/ContactForm";
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    // alert('Thank you for your message! I will get back to you shortly.')
-  }
+export default function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="max-w-lg mx-auto px-4">
-      <h1 className="text-3xl font-bold mb-6">Contact Me</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input name="name" placeholder="Name" value={formData.name} onChange={handleChange} className="w-full border rounded p-2" required />
-        <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} className="w-full border rounded p-2" required />
-        <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} rows={5} className="w-full border rounded p-2" required />
-        <BaseButton type="primary">Send</BaseButton>
-      </form>
-    </section>
-  )
+    <main className="min-h-screen text-slate-900 dark:text-white flex flex-col">
+      <section className="relative flex-1 flex items-center justify-center px-4 py-16 overflow-hidden">
+        <div className="relative w-full">
+          <div className="mb-12">
+            <p className="text-amber-500 dark:text-amber-400 font-mono text-xs tracking-[0.3em] uppercase mb-4">
+              Get in touch
+            </p>
+            <h1 className="text-5xl sm:text-6xl font-black leading-[1.05] tracking-tight">
+              Let&apos;s work
+              <br />
+              <span className="dark:text-white/20">together.</span>
+            </h1>
+          </div>
+
+          <BaseModal isOpen={submitted} onClose={() => setSubmitted(false)}>
+            <div className="w-[500px]">
+              {" "}
+              <div className="text-4xl mb-4">✦</div>
+              <h2 className="text-2xl font-bold mb-2">Message sent!</h2>
+              <p className="dark:text-white/50 text-sm">
+                I&apos;ll get back to you as soon as possible.
+              </p>
+            </div>
+          </BaseModal>
+
+          <ContactForm onSubmitSuccess={() => setSubmitted(true)} />
+          <div className="mt-16 pt-8 border-t border-white/5 flex flex-wrap gap-6 text-xs font-mono text-slate-400 dark:text-white/30">
+            <BaseLink
+              href="mailto:saramarini24137@gmail.com"
+              className="hover:text-amber-400 transition-colors"
+            >
+              saramarini24137@gmail.com
+            </BaseLink>
+            <BaseLink
+              href="https://www.linkedin.com/in/sara-marini-3834a424a/"
+              className="hover:text-amber-400 transition-colors"
+            >
+              LinkedIn
+            </BaseLink>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
