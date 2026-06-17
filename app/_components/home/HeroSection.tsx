@@ -1,6 +1,6 @@
 "use client";
 
-import { useNavigation } from "@/utils/useNavigation";
+import { useNavigation } from "@/app/(main)/utils/useNavigation";
 import BaseButton from "@/components/BaseButton";
 import { pills } from "../../../data/home/home";
 
@@ -24,7 +24,7 @@ export default function HomePage() {
             <span className="text-violet-500 dark:text-violet-400">
               Vue, Nuxt
             </span>{" "}
-            And
+            _
             <br />
             <span className="text-violet-500 dark:text-violet-400">
               React, Next.js
@@ -43,16 +43,16 @@ export default function HomePage() {
             React&nbsp;&amp;&nbsp;Next.js. Ready for either ecosystem.
           </p>
 
-          <div className="flex flex-wrap justify-between lg:justify-start gap-4 mb-10 md:mb-0">
+          <div className="flex flex-wrap lg:justify-start gap-4 mb-10 md:mb-0">
             <BaseButton
-              className="bg-violet-600 text-white hover:bg-violet-700 px-8 py-3 text-sm font-semibold transition-all rounded-lg shadow-lg shadow-violet-500/20 w-[calc(50%-16px)]
+              className="bg-violet-600 text-white hover:bg-violet-700 px-8 py-3 text-sm font-semibold transition-all rounded-lg shadow-lg shadow-violet-500/20 w-[calc(50%-8x)]
 "
               onClick={() => navigate("/projects")}
             >
               See my work
             </BaseButton>
             <BaseButton
-              className="border border-slate-200 dark:border-slate-800 rounded-lg px-8 py-3 text-sm font-semibold transition-all w-[calc(50%-16px)]
+              className="border border-slate-200 dark:border-slate-800 rounded-lg px-8 py-3 text-sm font-semibold transition-all w-[calc(50%-8px)]
 "
               onClick={() => navigate("/about")}
               type="secondary"
@@ -63,9 +63,9 @@ export default function HomePage() {
         </div>
 
         <div className="flex-1 items-center justify-center relative hidden lg:flex">
-          <div className="absolute w-64 h-64 bg-violet-500/10 blur-[120px] rounded-full" />
+          <div className="absolute w-64 h-64 bg-violet-500/10 blur-[80px] rounded-full" />
 
-          <div className="relative w-full max-w-[420px] bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-8 rounded-3xl shadow-2xl">
+          <div className="relative w-full max-w-[420px] bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-8 rounded-3xl shadow-lg">
             <div className="flex justify-between text-[10px] uppercase tracking-widest font-mono font-bold text-slate-400 mb-6">
               <span>Engineering pivot</span>
               <span className="text-violet-500">Active</span>

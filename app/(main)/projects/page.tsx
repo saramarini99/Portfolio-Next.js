@@ -4,7 +4,7 @@ import { useState } from "react";
 import BaseMotion from "@/components/BaseMotion";
 import BaseButton from "@/components/BaseButton";
 import ProjectCard from "@/components/ProjectCard";
-import { projects, filters } from "../../data/projects/projects";
+import { projects, filters } from "../../../data/projects/projects";
 
 export default function ProjectsPage() {
   const [active, setActive] = useState("All");

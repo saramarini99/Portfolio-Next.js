@@ -22,7 +22,7 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./app/_components/*"],
-      "@/utils/*":["./app/utils/*"]
+      "@/utils/*":["app/(main)/utils/*"]
     }
   },
   "include": [
