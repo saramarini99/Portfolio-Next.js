@@ -37,9 +37,8 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // your submit logic here (e.g. send to API)
-    onSubmitSuccess(); // tell parent we're done
-    setFormData(initialFormData); // reset form internally
+    onSubmitSuccess();
+    setFormData(initialFormData);
   };
 
   return (
@@ -85,10 +84,7 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
         className={`${inputClass} resize-none`}
       />
 
-      <div className="pt-2 flex items-center justify-between gap-4">
-        <p className="text-slate-400 dark:text-white/25 text-xs font-mono">
-          I usually reply within 24h.
-        </p>
+      <div className="pt-2 flex items-center justify-end gap-4">
         <BaseButton
           type="secondary"
           className="group flex items-center gap-3 px-7 py-3 rounded-xl transition-all duration-200 active:scale-95"

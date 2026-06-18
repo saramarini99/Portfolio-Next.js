@@ -39,7 +39,7 @@ export const skills = {
 
 export const timeline = [
   {
-    period: "May 2025 – Present",
+    period: "May 2025 – March 2026",
     role: "Front-End Developer",
     company: "Tabdeal",
     highlights: [

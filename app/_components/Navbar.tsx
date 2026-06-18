@@ -10,10 +10,11 @@ const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
 });
 
 const links = [
-  { id: 0, name: "Home", path: "/home" },
-  { id: 1, name: "About", path: "/about" },
-  { id: 2, name: "Projects", path: "/projects" },
-  { id: 3, name: "Contact", path: "/contact" },
+  { id: 0, name: "Intro", path: "/intro" },
+  { id: 1, name: "Home", path: "/home" },
+  { id: 2, name: "About", path: "/about" },
+  { id: 3, name: "Projects", path: "/projects" },
+  { id: 4, name: "Contact", path: "/contact" },
 ];
 
 type NavbarLinkProps = {

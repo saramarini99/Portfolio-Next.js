@@ -19,7 +19,7 @@ export default function HomePage() {
             Vue · Nuxt · React · Next.js
           </div>
 
-          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-6 leading-[1.3] text-justify md:text-left">
+          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-6 leading-[1.3] text-left">
             Building production web apps in{" "}
             <span className="text-violet-500 dark:text-violet-400">
               Vue, Nuxt
@@ -75,7 +75,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <div className="flex justify-between text-[11px] dark:text-slate-300">
                   <span>Vue / Nuxt (production)</span>
-                  <span className="text-green-500 font-bold">4 yrs</span>
+                  <span className="text-green-500 font-bold">4 years</span>
                 </div>
                 <div className="h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                   <div className="w-full h-full bg-green-500 rounded-full" />

@@ -18,7 +18,11 @@ export default function AboutIntro() {
           <span className="text-slate-900 dark:text-white font-semibold">
             4 years of production experience
           </span>{" "}
-          specializing in Vue.js and Nuxt.
+          specializing in
+          <span className="text-slate-900 dark:text-white font-semibold">
+            {" "}
+            Vue.js and Nuxt.
+          </span>
         </p>
         <p>
           I have a strong foundation in component-driven architecture, SSR,

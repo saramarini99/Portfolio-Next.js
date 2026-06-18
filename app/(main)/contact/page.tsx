@@ -24,7 +24,7 @@ export default function ContactPage() {
           </div>
 
           <BaseModal isOpen={submitted} onClose={() => setSubmitted(false)}>
-            <div className="w-[500px]">
+            <div className="w-[300px] md:w-[500px]">
               {" "}
               <div className="text-4xl mb-4">✦</div>
               <h2 className="text-2xl font-bold mb-2">Message sent!</h2>
