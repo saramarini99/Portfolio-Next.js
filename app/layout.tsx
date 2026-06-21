@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem={false}
         >
           <div className="fixed inset-0 -z-10 bg-gradient-to-b from-violet-500/10 to-transparent" />
